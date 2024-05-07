@@ -1,0 +1,295 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+
+@font-face {
+    font-family: 'BMHannaPro';
+    font-weight: normal; 
+    font-style: normal; 
+    src: url(https://cdn.jsdelivr.net/gh/webfontworld/woowahan/BMHannaPro.woff2) format('woff2');
+    font-display: swap;
+}
+h2{
+    font-size: 20pt;
+    margin-left: 10px;
+    color: #101010;
+}
+
+body {
+    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #48cbc4; /* 배경색 설정 */
+    display: flex;
+    justify-content: center; /* 수평 가운데 정렬 */
+    align-items: center; /* 수직 가운데 정렬 */
+    min-height: 100vh; /* 최소 화면 높이 */
+    background-image: url('https://ifh.cc/g/dzVsn7.png');
+    background-size: cover; /* 이미지를 화면에 맞게 조절 */
+    background-position: center; /* 이미지를 가운데 정렬 */
+}
+
+.rating {
+    display: inline-block;
+    margin-left: 10px;
+  }
+  
+  .rating input {
+    display: none;
+    margin: 0 5px; /* 별표 간격 설정 */
+  }
+  
+  .rating label {
+    float: right;
+    cursor: pointer;
+    color: #a5a5a5;
+    transition: color 0.3s;
+  }
+  
+  .rating label:before {
+    content: '\2605';
+    font-size: 25px;
+  }
+  
+  .rating input:checked ~ label,
+  .rating label:hover,
+  .rating label:hover ~ label {
+    color: #00ffea;
+    transition: color 0.3s;
+  }
+  
+
+
+
+
+  .card {
+    width: 290px;
+    height: 180px;
+    padding: 0.5rem;
+    background: rgba(198, 198, 198, 0.34);
+    border-radius: 8px;
+    backdrop-filter: blur(5px);
+    border-bottom: 3px solid rgba(255, 255, 255, 0.440);
+    border-left: 2px  rgba(255, 255, 255, 0.545) outset;
+    box-shadow: -40px 50px 30px rgba(0, 0, 0, 0.280);
+    transform: skewX(10deg);
+    transition: .4s;
+    overflow: hidden;
+    color: white;
+    flex-direction: column; /* label 요소들을 세로로 배치하기 위해 */
+    align-items: center; /* 가로 방향 가운데 정렬 */
+  }
+  
+  .card:hover {
+    height: 254px;
+    transform: skew(0deg);
+  }
+  
+  .align {
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-self: flex-start;
+  }
+  
+  .red {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ff605c;
+    box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.280);
+  }
+  
+  .yellow {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ffbd44;
+    box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.280);
+  }
+  
+  .green {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #00ca4e;
+    box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.280);
+  }
+  
+  .card h1 {
+    text-align: center;
+    margin: 1.3rem;
+    color: rgb(218, 244, 237);
+    text-shadow: -10px 5px 10px rgba(0, 0, 0, 0.573);
+  }
+  
+  
+ /* 글씨쓰는 칸 */
+
+
+  .input-container {
+    position: relative;
+  }
+  
+  .input {
+    font-size: 1em;
+    padding: 2.2em 2.8em;
+    border: none;
+    border-radius: 6px;
+    background-color: #f8f8f8;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    max-width: 300px;
+    color: #333;
+    margin-left: 10px;
+  }
+  
+
+
+
+
+  
+  .input:hover {
+    background-color: #f2f2f2;
+  }
+  
+  .input:focus {
+    outline: none;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .input::placeholder {
+    color: #c6c6c6;
+  }
+  
+  .highlight {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #00ffea;
+    transition: width 0.3s ease;
+  }
+  
+  .input:focus + .highlight {
+    width: 94.5%;
+    margin-left: 10px;
+  }
+  
+  /* Optional: Animation on focus */
+  @keyframes input-focus {
+    from {
+      transform: scale(1);
+      box-shadow: 0 0 0 rgba(0, 0, 0, 0.1);
+    }
+  
+    to {
+      transform: scale(1.02);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+  }
+  
+  .input:focus {
+    animation: input-focus 0.3s ease;
+  }
+  
+
+
+
+
+.menuu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 999;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+}
+
+.menu {
+    margin-left: auto;
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.menu ul li a:hover {
+    color: #080808;
+}
+
+
+.cf:after {
+    content: " "; 
+    display: block; 
+    clear: both;
+}
+
+.wrapper {
+  width: 100%;
+  max-width:800px;
+  margin: 60px auto 2000px;
+}
+.content {
+  padding: 0 50px;
+  width: 500px;
+}
+.content h1 {
+  margin-top: 0;
+  color: #fff;
+}
+
+.sidebar {
+  width: 170px;
+  background-color: #434A54;
+  color: #fff;
+  position: sticky;
+  margin-top: 20px;
+}
+.sidebar h3 {
+  margin: 0;
+}
+.content,
+.sidebar {
+  float: left;
+}
+
+
+.sidebar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.logo img{
+  width: 140px;
+  margin-left: 90px;
+}
